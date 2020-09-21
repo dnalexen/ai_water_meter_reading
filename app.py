@@ -128,8 +128,12 @@ app = dash.Dash(__name__)
 server = app.server  # Expose the server variable for deployments
 
 app.layout = html.Div(className='container', children=[
-    Row(html.H1("YOLOv4 for Water Meter Reading")),
+    Row(html.Br()),
+    Row([Column(width=12, children=[html.H1("YOLOv4 for Water Meter Reading")])
+
+    ]),
     Row(html.P("This app is to show the readings done on some water meters' images with a PyTorch YOLOv4 model.")),
+
     #Row(html.P("Input Image URL:")),
     Row(html.Br()),
     Row([
@@ -142,7 +146,10 @@ app.layout = html.Div(className='container', children=[
         Column(html.Button("Random Image", id='button-random', n_clicks=0), width=2)
     ]),
 
-    Row(dcc.Graph(id='model-output', style={"height": "70vh"})),
+    Row(dcc.Graph(id='model-output', style={"height": "70vh"},
+                  config=dict({'scrollZoom': True})
+                  )
+       ),
 
     Row([
         Column(width=7, children=[
@@ -168,10 +175,30 @@ app.layout = html.Div(className='container', children=[
         ])
     ]),
     Row(html.Br()),
-    Row(html.A(id="learn_more", children=html.Button("Learn More on the Dataset"),
+    Row([
+         Column(width=4, children= [html.A(id="learn_more",
+                                           children=html.Button("Know The Dataset"),
+                style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
                href="https://challengedata.ens.fr/challenges/30",
                target='_blank')
-        )
+               ]),
+         # Column(width=4, children= [html.A(id="docker_image_app",
+         #                                   children=html.Button("Pull Docker Image",
+         #                                   title='With the docker image app, you can test an image with its url'),
+         #        style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
+         #           #href="to come",
+         #           #target='_blank'
+         #           )
+         #       ]),
+         # Column(width=4, children= [html.A(id="github_repo",
+         #                                   children=html.Button("See Github Repo",
+         #                                   title='See the codes of the model and app'),
+         #        style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
+         #           #href="to come",
+         #           #target='_blank'
+         #           )
+         #       ])
+        ])
 ])
 
 
@@ -207,7 +234,8 @@ def run_model(n_clicks, n_submit, iou, confidence, url):
     # load the image with the url
     try:
         img = Image.open(requests.get(url, stream=True).raw).convert('RGB')
-    except:
+    except Exception as e:
+        print(e)
         return go.Figure().update_layout(title='Incorrect URL')
     sized = img.resize((608, 608))
 
@@ -225,7 +253,7 @@ def run_model(n_clicks, n_submit, iou, confidence, url):
     if index == None:
         index = 'failure to predict'
     else:
-        index = str(index) + ' m³'
+        index = index
 
     # display the image on the app
     fig = pil_to_fig(img, showlegend=True, title=f'Prediction of cubic meters: {index}')
