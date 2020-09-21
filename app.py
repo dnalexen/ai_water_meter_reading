@@ -129,9 +129,9 @@ server = app.server  # Expose the server variable for deployments
 
 app.layout = html.Div(className='container', children=[
     Row(html.H1("YOLOv4 for Water Meter Reading")),
-
-    Row(html.Br()),
+    Row(html.P("This app is to show the readings done on some water meters' images with a PyTorch YOLOv4 model.")),
     #Row(html.P("Input Image URL:")),
+    Row(html.Br()),
     Row([
         Column(width=8, children=[
             dcc.Input(id='input-url', style={'width': '100%'},
