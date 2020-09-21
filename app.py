@@ -139,7 +139,7 @@ app.layout = html.Div(className='container', children=[
                       ),
         ], hidden=False),
         Column(html.Button("Predict", id='button-run', n_clicks=0), width=2),
-        Column(html.Button("Next Image", id='button-random', n_clicks=0), width=2)
+        Column(html.Button("Random Image", id='button-random', n_clicks=0), width=2)
     ]),
 
     Row(dcc.Graph(id='model-output', style={"height": "70vh"})),
