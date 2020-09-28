@@ -191,8 +191,8 @@ app.layout = html.Div(className='container', children=[
                    )
                ]),
          Column(width=4, children= [html.A(id="github_repo",
-                                           children=html.Button("See Github Repo",
-                                           title='See the codes of the model and app'),
+                                           children=html.Button("See Github Repo"
+                                           ),
                 style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
                    href="https://github.com/dnalexen/ai_water_meter_reading",
                    target='_blank'
