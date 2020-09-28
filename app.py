@@ -4,6 +4,7 @@ import time
 
 import dash
 from dash.dependencies import Input, Output, State
+import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 import pandas as pd
@@ -129,10 +130,10 @@ server = app.server  # Expose the server variable for deployments
 
 app.layout = html.Div(className='container', children=[
     Row(html.Br()),
-    Row([Column(width=12, children=[html.H1("YOLOv4 for Water Meter Reading")])
-
+    Row([Column(width=12, children=[html.H2("YOLOv4 for Water Meter Reading")]),
     ]),
-    Row(html.P("This app is to show the readings done on some water meters' images with a PyTorch YOLOv4 model.")),
+    Row([Column(width=7, children=[html.P("This app is to show the readings done on some water meters' images with a PyTorch YOLOv4 model.")])
+    ]),
 
     #Row(html.P("Input Image URL:")),
     Row(html.Br()),
@@ -182,22 +183,22 @@ app.layout = html.Div(className='container', children=[
                href="https://challengedata.ens.fr/challenges/30",
                target='_blank')
                ]),
-         # Column(width=4, children= [html.A(id="docker_image_app",
-         #                                   children=html.Button("Pull Docker Image",
-         #                                   title='With the docker image app, you can test an image with its url'),
-         #        style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
-         #           #href="to come",
-         #           #target='_blank'
-         #           )
-         #       ]),
-         # Column(width=4, children= [html.A(id="github_repo",
-         #                                   children=html.Button("See Github Repo",
-         #                                   title='See the codes of the model and app'),
-         #        style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
-         #           #href="to come",
-         #           #target='_blank'
-         #           )
-         #       ])
+         Column(width=4, children= [html.A(id="docker_image_app",
+                                           children=html.Button("Pull Docker Image",
+                                           title='With the docker app, you can test an image with its url (to come)'),
+                style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
+                   #href="to come",
+                   #target='_blank'
+                   )
+               ]),
+         Column(width=4, children= [html.A(id="github_repo",
+                                           children=html.Button("See Github Repo",
+                                           title='See the codes of the model and app'),
+                style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
+                   href="https://github.com/dnalexen/ai_water_meter_reading",
+                   target='_blank'
+                   )
+               ])
         ])
 ])
 
