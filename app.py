@@ -176,17 +176,25 @@ app.layout = html.Div(className='container', children=[
     ]),
     Row(html.Br()),
     Row([
-         Column(width=6, children= [html.A(id="learn_more",
+         Column(width=4, children= [html.A(id="learn_more",
                                            children=html.Button("Know The Dataset"),
                 style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
                href="https://challengedata.ens.fr/challenges/30",
                target='_blank')
                ]),
-         Column(width=6, children= [html.A(id="github_repo",
+         Column(width=4, children= [html.A(id="github_repo",
                                            children=html.Button("See Github Repo"
                                            ),
                 style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
                    href="https://github.com/dnalexen/ai_water_meter_reading",
+                   target='_blank'
+                   )
+               ]),
+         Column(width=4, children= [html.A(id="other_projects",
+                                           children=html.Button("Other Projects"
+                                           ),
+                style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
+                   href="https://dnalexen.github.io/",
                    target='_blank'
                    )
                ])
