@@ -176,21 +176,13 @@ app.layout = html.Div(className='container', children=[
     ]),
     Row(html.Br()),
     Row([
-         Column(width=4, children= [html.A(id="learn_more",
+         Column(width=6, children= [html.A(id="learn_more",
                                            children=html.Button("Know The Dataset"),
                 style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
                href="https://challengedata.ens.fr/challenges/30",
                target='_blank')
                ]),
-         Column(width=4, children= [html.A(id="docker_image_app",
-                                           children=html.Button("Pull Docker Image",
-                                           title='With the docker app, you can test an image with its url (to come)'),
-                style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
-                   #href="to come",
-                   #target='_blank'
-                   )
-               ]),
-         Column(width=4, children= [html.A(id="github_repo",
+         Column(width=6, children= [html.A(id="github_repo",
                                            children=html.Button("See Github Repo"
                                            ),
                 style={'width': '40%', 'padding-left':'30%', 'padding-right':'30%'},
