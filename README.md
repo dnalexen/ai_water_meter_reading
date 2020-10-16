@@ -6,6 +6,4 @@ The model is live on a web app: https://ai-water-meter-reading.herokuapp.com/.
 
 In the notebook meter-reading-YOLOv4-Roboflow-PyTorch.ipynb, you will find the code explained.
 
-https://github.com/dnalexen/ai_water_meter_reading/blob/master/Screenshot%20app.png?raw=true
-
-![Alt text](https://github.com/dnalexen/ai_water_meter_reading/blob/master/Screenshot%20app.png?raw=true?raw=true "Title")
+![Alt text](https://github.com/dnalexen/ai_water_meter_reading/blob/master/Screenshot%20app.png?raw=true?raw=true "Screenshot app")
