@@ -4,6 +4,8 @@ We used an implementation of the YOLOv4 algorithm that we customed to our datase
 
 The model is live on a web app: https://ai-water-meter-reading.herokuapp.com/.
 
+The dataset is available at: https://challengedata.ens.fr/challenges/30.
+
 In the notebook meter-reading-YOLOv4-Roboflow-PyTorch.ipynb, you will find the code explained.
 
 ![Alt text](https://github.com/dnalexen/ai_water_meter_reading/blob/master/Screenshot%20app.png?raw=true?raw=true "Screenshot app")
