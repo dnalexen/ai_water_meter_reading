@@ -8,4 +8,4 @@ In the notebook meter-reading-YOLOv4-Roboflow-PyTorch.ipynb, you will find the c
 
 https://github.com/dnalexen/ai_water_meter_reading/blob/master/Screenshot%20app.png?raw=true
 
-![Alt text](Screenshot app.png?raw=true "Title")
+![Alt text](https://github.com/dnalexen/ai_water_meter_reading/blob/master/Screenshot%20app.png?raw=true?raw=true "Title")
