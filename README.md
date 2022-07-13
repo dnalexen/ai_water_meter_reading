@@ -1,4 +1,4 @@
-The objective of this project is to design an algorithm to read the exact consumption index from a valid picture of a meter. 
+The objective of this project was to design an algorithm to read the exact consumption index from a valid picture of a meter. 
 
 We used an implementation of the YOLOv4 algorithm that we customed to our dataset.
 
