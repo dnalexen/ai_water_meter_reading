@@ -2,7 +2,7 @@ The objective of this project was to design an algorithm to read the exact consu
 
 We used an implementation of the YOLOv4 algorithm that we customed to our dataset.
 
-The model is live on a web app: https://ai-water-meter-reading.herokuapp.com/.
+The model is live on a web app: https://dash-app-meter-reading.onrender.com/.
 
 The dataset is available at: https://challengedata.ens.fr/challenges/30.
 
